@@ -1,0 +1,42 @@
+{
+  "experiment": "EXP03",
+  "epoch": 20,
+  "fid": 266.868261,
+  "selection_criterion": "Lowest FID among evaluated checkpoints",
+  "config": {
+    "image_size": 32,
+    "image_channels": 3,
+    "batch_size": 64,
+    "latent_dim": 100,
+    "learning_rate_g": 0.0002,
+    "learning_rate_d": 0.0002,
+    "beta1": 0.5,
+    "beta2": 0.999,
+    "epochs": 20,
+    "optimizer": "Adam",
+    "architecture": "DCGAN compact non conditionnel",
+    "generator_channels": [
+      128,
+      64,
+      32,
+      3
+    ],
+    "discriminator_channels": [
+      32,
+      64,
+      128
+    ],
+    "generator_activation": "ReLU / Tanh",
+    "discriminator_activation": "LeakyReLU(0.2) / logits",
+    "loss": "BCEWithLogitsLoss",
+    "generator_objective": "non-saturating",
+    "ratio_method": "crop",
+    "normalization": "[-1, 1]",
+    "num_workers": 0,
+    "drop_last": false,
+    "dataset_size": 1000,
+    "device": "cpu",
+    "experiment": "EXP03",
+    "seed": 42
+  }
+}
